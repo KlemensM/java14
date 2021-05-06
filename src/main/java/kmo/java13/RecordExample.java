@@ -40,6 +40,14 @@ class Audi {
         this.vin = vin;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public String getVin() {
+        return vin;
+    }
+
     @Override
     public boolean equals(final Object o) {
         if (this == o) {
