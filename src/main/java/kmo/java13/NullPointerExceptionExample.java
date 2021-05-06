@@ -26,9 +26,9 @@ public class NullPointerExceptionExample {
         tryAndLog(() -> levelOne.doSomething().doSomething());
         tryAndLog(() -> levelTwo.doSomething().doSomething());
         tryAndLog(() -> levelThreeWithNPEInMethod.doSomething().doSomething());
-        tryAndLog(() -> field.toString());
+        tryAndLog(() -> field.substring(1));
         tryAndLog(() -> new ArrayList<>(null));
-        tryAndLog(() -> Stream.of(levelOneWithNPE).forEach(lvlOne -> lvlOne.doSomething()));
+        tryAndLog(() -> Stream.of(levelOneWithNPE).forEach(LevelOne::doSomething));
     }
 
     interface LevelOne {
